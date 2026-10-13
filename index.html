@@ -1,0 +1,208 @@
+<!DOCTYPE html><html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BizFlow Dashboard</title>
+    
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+    </head>
+        
+
+<body>
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+
+         <div class="logo" >
+            <h2 class="">BizFlow</h2>
+        <button id="closeBtn" aria-label="Close menu" class="close">✕</button></div>
+
+
+        <nav id="navMenu">
+            <a href="#dashboard">Dashboard</a>
+            <a href="#customers">Customers</a>
+            <a href="#transactions">Transactions</a>
+        </nav>
+
+    </aside>
+
+
+    <!-- Main Content -->
+      <!-- Top Bar -->
+        <header class="topbar">
+
+            <button id="menuBtn" class="menu-btn">
+                ☰
+            </button>
+
+            <div>
+                <h1>Business Dashboard</h1>
+                <p>Welcome back 👋</p>
+            </div>
+
+        </header>
+    <main class="main-content">
+
+
+
+        <!-- Dashboard -->
+        <section id="dashboard">
+
+            <div class="stats-container">
+
+                <div class="stat-card">
+                    <span>Total Revenue</span>
+                    <h2 id="totalRevenue">₦0</h2>
+                </div>
+
+                <div class="stat-card">
+                    <span>Total Customers</span>
+                    <h2 id="totalCustomers">0</h2>
+                </div>
+
+                <div class="stat-card">
+                    <span>Total Transactions</span>
+                    <h2 id="totalTransactions">0</h2>
+                </div>
+
+                <div class="stat-card">
+                    <span>Completed Payments</span>
+                    <h2 id="completedPayments">0</h2>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Customers -->
+        <section class="section" id="customers">
+
+            <div class="section-header">
+
+                <div>
+                    <h2>Customers</h2>
+                    <p>Manage your customers</p>
+                </div>
+
+                <button id="addCustomerBtn" class="primary-btn">
+                    + Add Customer
+                </button>
+
+            </div>
+
+
+            <!-- Add Customer Form -->
+            <form id="customerForm" class="customer-form">
+
+                <input
+                    type="text"
+                    id="customerName"
+                    placeholder="Customer name"
+                >
+
+                <input
+                    type="email"
+                    id="customerEmail"
+                    placeholder="Customer email"
+                >
+
+                <button type="submit">
+                    Add Customer
+                </button>
+
+            </form>
+
+
+            <!-- Customer List -->
+            <div id="customerList" class="customer-list"></div>
+
+        </section>
+
+
+        <!-- Transactions -->
+        <section class="section" id="transactions">
+
+            <div class="section-header">
+
+                <div>
+                    <h2>Transactions</h2>
+                    <p>Recent business transactions</p>
+                </div>
+
+            </div>
+
+
+            <!-- Search and Filter -->
+            <div class="filters">
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search transactions..."
+                >
+
+                <select id="statusFilter">
+
+                    <option value="all">
+                        All Status
+                    </option>
+
+                    <option value="completed">
+                        Completed
+                    </option>
+
+                    <option value="pending">
+                        Pending
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- Transaction Table -->
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+                            <th>Customer</th>
+                            <th>Amount</th>
+                            <th>Status</th>
+                            <th>Date</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="transactionList"></tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+    </main>
+    <footer class="footer-bottom-bar">
+        <div class="">
+            <p style="display:flex; align-items:center; gap:6px;">
+            <span style="color:var(--accent-emerald);">●</span> Crafted by Onoseigho Darby
+            </p>
+            </div>
+        </footer>
+
+
+    <script src="script.js"></script>
+
+    
+
+
+</body>
+</html>
